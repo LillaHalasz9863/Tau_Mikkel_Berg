@@ -41,40 +41,39 @@ ul.primary-menu, .menu-modal-inner{
 
 ul.primary-menu a{
 padding:5px;
+}
 
-&:before,
-&:after {
+ul.primary-menu a::before{
     content: '';
     position: absolute;
-    bottom: 2px;
-    left: 0; right: 0;
-    height: 2px;
+    top: 0%;
+    left: 0%;
     background-color: #62BF04;
-}
-&:before {
-    opacity: 0;
-    transform: translateY(- 8px);
-    transition: transform 0s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity 0s;
-}
-&:after {
-    opacity: 0;
-    transform: translateY(8px/2);
-    transition: transform .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity .2s;
-}
-&:hover,
-&:focus {
-    &:before,
-    &:after {
-        opacity: 1;
-        transform: translateY(0);
+    height: 2px;
+    width: 0%;
+    transition: 0.5s all;
     }
-    &:before {
-        transition: transform .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity .2s;
+
+    ul.primary-menu a:hover::before{
+        width:90%;
+        transition: 1s all;
     }
-    &:after {
-        transition: transform 0s .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity 0s .2s;
-    }
-}
-}
+
+
+    ul.primary-menu a::after{
+        content: '';
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        background-color: #62BF04;
+        height: 2px;
+        width: 0%;
+        transition: 0.5s all;
+        }
+    
+        ul.primary-menu a:hover::after{
+            width:90%;
+            transition: 1s all;
+        }
 
 /* ---END of menu--- */
