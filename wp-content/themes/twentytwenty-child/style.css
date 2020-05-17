@@ -14,15 +14,11 @@ Tags: clean, starter
 
 /* General settings */
 
-$green: #62BF04;
-$lgreen:#4A9103;
-$blue: #00A7D2;
-$lblue:#2BD8E8;
+/* green: #62BF04
+lgreen:#4A9103
+blue: #00A7D2
+lblue:#2BD8E8 */
 
-
-$duration: .2s;
-$distance: 8px;
-$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 
 body{
     font-family: roboto, sans-serif;
@@ -53,17 +49,17 @@ padding:5px;
     bottom: 2px;
     left: 0; right: 0;
     height: 2px;
-    background-color: $green;
+    background-color: #62BF04;
 }
 &:before {
     opacity: 0;
-    transform: translateY(- $distance);
-    transition: transform 0s $easeOutBack, opacity 0s;
+    transform: translateY(- 8px);
+    transition: transform 0s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity 0s;
 }
 &:after {
     opacity: 0;
-    transform: translateY($distance/2);
-    transition: transform $duration $easeOutBack, opacity $duration;
+    transform: translateY(8px/2);
+    transition: transform .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity .2s;
 }
 &:hover,
 &:focus {
@@ -73,10 +69,10 @@ padding:5px;
         transform: translateY(0);
     }
     &:before {
-        transition: transform $duration $easeOutBack, opacity $duration;
+        transition: transform .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity .2s;
     }
     &:after {
-        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+        transition: transform 0s .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity 0s .2s;
     }
 }
 }
