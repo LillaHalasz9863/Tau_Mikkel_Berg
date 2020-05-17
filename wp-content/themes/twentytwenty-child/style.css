@@ -26,10 +26,12 @@ body{
     font-style: normal;
     color: black;
 }
-
 h1.entry-title{
     display:none;
 }
+ul.primary-menu a {
+    color:#000000!important;
+    }
 
 /* ---START of menu--- */
 ul.primary-menu, .menu-modal-inner{
@@ -39,8 +41,14 @@ ul.primary-menu, .menu-modal-inner{
     font-size: 25px;
 }
 
+
 ul.primary-menu a{
 padding:5px;
+text-decoration: none;
+}
+
+ul.primary-menu a:link{
+    text-decoration: none;
 }
 
 ul.primary-menu a::before{
@@ -55,10 +63,9 @@ ul.primary-menu a::before{
     }
 
     ul.primary-menu a:hover::before{
-        width:90%;
+        width:100%;
         transition: 1s all;
     }
-
 
     ul.primary-menu a::after{
         content: '';
@@ -72,8 +79,86 @@ ul.primary-menu a::before{
         }
     
         ul.primary-menu a:hover::after{
-            width:90%;
+            width:100%;
             transition: 1s all;
         }
 
+        ul.primary-menu a:active{
+        transition: none;
+           width:100%;
+           border-top: 2px solid #62BF04;
+           border-bottom: 2px solid #62BF04;
+        }
+
 /* ---END of menu--- */
+
+
+
+/* ---START of programmer--- */
+h2{
+    text-align:center;
+    text-decoration:underline;
+    font-family: p22-underground-sc, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+  }
+  table{
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    padding:15px 20px; 
+    width:100%;
+  }
+  table:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+  }
+  td {
+    text-align: center;
+  }
+  th {
+    font-family: p22-underground-sc, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 25px;
+    padding:20px 0px;
+  }
+  td.price{
+    color:#00A7D2;
+    border-bottom: 0px;
+  }
+  td {
+    font-family: roboto, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    padding:10px 0px;
+    border-bottom: 1px solid #ddd;
+  }
+  td.discount {
+    padding:0px 0px 30px 0px;
+    color:red;
+  }
+  td.price, td.discount{
+    font-family: p22-underground-sc, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+  }
+  
+  td button {
+    color: white;
+    background-color:#00A7D2;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    font-family: p22-underground-sc, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+  }
+  
+  button:hover{
+    background-color:#4A9103;
+    transition: 0.2s;
+  }
+/* ---END of programmer--- */
