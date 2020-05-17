@@ -11,14 +11,74 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: clean, starter
 */
 
+
+/* General settings */
+
+$green: #62BF04;
+$lgreen:#4A9103;
+$blue: #00A7D2;
+$lblue:#2BD8E8;
+
+
+$duration: .2s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
 body{
     font-family: roboto, sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: black;
 }
 
-ul.primary-menu{
+h1.entry-title{
+    display:none;
+}
+
+/* ---START of menu--- */
+ul.primary-menu, .menu-modal-inner{
     font-family: p22-underground-sc, sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 25px;
 }
+
+ul.primary-menu a{
+padding:5px;
+
+&:before,
+&:after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0; right: 0;
+    height: 2px;
+    background-color: $green;
+}
+&:before {
+    opacity: 0;
+    transform: translateY(- $distance);
+    transition: transform 0s $easeOutBack, opacity 0s;
+}
+&:after {
+    opacity: 0;
+    transform: translateY($distance/2);
+    transition: transform $duration $easeOutBack, opacity $duration;
+}
+&:hover,
+&:focus {
+    &:before,
+    &:after {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    &:before {
+        transition: transform $duration $easeOutBack, opacity $duration;
+    }
+    &:after {
+        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+    }
+}
+}
+
+/* ---END of menu--- */
