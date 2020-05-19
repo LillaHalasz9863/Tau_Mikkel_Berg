@@ -17,6 +17,8 @@
 
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+		<meta name="robots" content="noindex, nofollow">
+		<script src="slideshow.js"></script>
 		<link rel="stylesheet" href="https://use.typekit.net/iyl8mnb.css">
 		<link rel="profile" href="https://gmpg.org/xfn/11">
 
