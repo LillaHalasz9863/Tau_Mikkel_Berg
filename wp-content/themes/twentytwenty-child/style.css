@@ -265,7 +265,7 @@ table.personal{
   padding: 20px 20px;
 }
 /* Img style*/
-img{
+img.img_review{
   vertical-align: middle;
   width:50%;
   margin-left: 20%;
