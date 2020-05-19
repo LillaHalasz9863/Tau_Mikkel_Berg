@@ -11,14 +11,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: clean, starter
 */
 
-
 /* General settings */
-
 /* green: #62BF04
 bgreen:#4A9103
 dgreen: #016D12*/
 
-body{
+p{
     font-family: roboto, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -31,24 +29,42 @@ h1.entry-title{
 }
 /* Makes the space smaller where the permalinks would be */
 .singular .entry-header{
-padding:20px;
+  padding:20px;
+  }
+/*Resizing the width of the content space*/
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide){
+  max-width: 90%;
+}
+/* H2 headin style */
+.entry-content h2, .entry-title a{
+  margin:10px 0px;
+  font-family: p22-underground, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 30px;
 }
 
+.entry-content hr{
+  margin:0
+}
 
 /* ----START styling of link buttons---- */
 a.online_linkbutton, a.consultation_linkbutton, a.personal_linkbutton, a.programme_button{
   color: white;
     background-color:#62BF04!important;
-    padding: 15px 20px;
     text-align: center;
     text-decoration: none!important;
-    display: inline-block;
+    padding:5px;
     border: none;
     border-radius: 6px;
     font-size: 20px;
-    font-family: p22-underground-sc, sans-serif;
-      font-weight: 400;
-      font-style: normal;
+    font-family: p22-underground, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }
 a.online_linkbutton:hover, a.consultation_linkbutton:hover, a.personal_linkbutton:hover, a.programme_button:hover{
   background-color:#016D12!important;
@@ -66,39 +82,52 @@ a.online_linkbutton:hover, a.consultation_linkbutton:hover, a.personal_linkbutto
 }
 
 /*---START of home grid---*/
-h2#motto{
+.motto{
   grid-column: col-start / span 6;
   grid-row: 1 ;
 }
-hr#home_hr{
-  grid-column: col-start / span 6;
-  grid-row: 2 ;
-}
-p#home_text{
-  grid-column: col-start / span 6;
-  grid-row: 3;
-}
 img#home_pic{
   grid-column: col-start 8/ span 5;
-  grid-row: 1 / 4;
+  grid-row: 1 / span 2;
 }
 a.online_linkbutton{
   grid-column: col-start / span 2;
-  grid-row: 5 ;
+  grid-row: 2 ;
 }
 a.consultation_linkbutton{
   grid-column: col-start 3/ span 2;
-  grid-row: 5;
+  grid-row: 2;
 }
 a.personal_linkbutton{
   grid-column: col-start 5/ span 2;
-  grid-row: 5 ;
+  grid-row: 2;
 }
 /*---END of home grid---*/
 
+
+/*---START of about me---*/
+.vision {
+  grid-column: col-start / span 6;
+  grid-row: 1 ;
+}
+.aboutme{
+  grid-column: col-start / span 6;
+  grid-row: 2 ;
+}
+.languages{
+  grid-column: col-start / span 6;
+  grid-row: 3 ;
+}
+img#aboutme_img{
+  grid-column: col-start 8/ span 4;
+  grid-row: 1 / span 4;
+}
+/*---END of about me---*/
+
+
 /*---START of programmes---*/
 h2#online_title{
-  grid-column: col-start / span 12;
+  grid-column: col-start 5 / span 4;
   grid-row: 1 ;
 }
  table.beginner{
@@ -125,15 +154,9 @@ table.personal{
   grid-column: col-start 7 / span 4;
   grid-row: 4 ;
 }
+/*---END of programmes---*/
 /*---END of grid---*/
 
-
-
-
-/* --- Resizing the width of the content space--- */
-.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide){
-  max-width: 90%;
-}
 
 
 /* ---START of menu--- */
@@ -142,8 +165,8 @@ ul.primary-menu a, .ancestor-wrapper a{
   color:#000000!important;
   padding:5px;
   text-decoration: none!important;
-  font-family: p22-underground-sc, sans-serif;
-  font-weight: 400;
+  font-family: p22-underground, sans-serif;
+  font-weight: 900;
   font-style: normal;
   font-size: 25px;
   }
@@ -189,14 +212,26 @@ li.current-menu-item a, li.current_page_item a{
 
 
 /* ---START of home--- */
-h2#motto{
+.motto h2{
 font-family: p22-underground-sc, sans-serif;
 font-weight: 600;
 font-style: normal;
-margin-top: 30px;
+margin-top: 5%;
+font-size: 40px;
+}
+p#home_text{
+  margin-top:5%;
 }
 /* ---END of home--- */
 
+
+/*---START of about me---*/
+p.vision, p.aboutme, p.languages{
+  margin-bottom:20px;
+  text-align: justify;
+}
+
+/*---END of about me---*/
 
 
 /* ---START of programmer--- */
@@ -204,12 +239,7 @@ h2#online_title,
 h2#consultation_title,
 h2#personal_title{
     text-align:center;
-    text-decoration:underline;
-    font-family: p22-underground-sc, sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 30px;
-      margin:0;
+    border-bottom: 2px solid #62BF04;
   }
 table.beginner,
 table.advanced,
@@ -218,39 +248,37 @@ table.personal{
     padding:15px 20px; 
     width:100%;
   }
-  table{
-    border: 5px solid black;
-    border-radius: 6px;
-  }
   td {
     text-align: center;
   }
   th {
     padding:20px 0px;
     text-align: center;
-    font-family: p22-underground-sc, sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 25px;
+    font-family: p22-underground, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 25px;
   }
   td.price{
     color:#016D12;
   }
   td {
     font-family: roboto, sans-serif;
-      font-weight: 400;
-      font-style: normal;
+    font-weight: 400;
+    font-style: normal;
     padding:10px 0px;
   }
   td.discount {
     padding:0px 0px 30px 0px;
     color:red;
-    border-bottom: 1px solid #ddd;
   }
   td.price, td.discount{
     font-family: p22-underground-sc, sans-serif;
       font-weight: 400;
       font-style: normal;
+  }
+  a.programme_button{
+  display: inline-block;
   }
 /* ---END of programmer--- */
 
@@ -329,11 +357,38 @@ td.description {
 /* ---END of reviews--- */
 
 
+/* ---START of FQ&A--- */
+.entry-categories a{
+  color:#62BF04!important;
+}
+.post-inner{
+  padding:20px;
+}
+/* ---END of FQ&A--- */
+
 
 
 /* ---START of footer--- */
-b, strong, p{
+b, strong, .widget_text p{
   font-family: roboto, sans-serif;
     color: black;
+    margin:0;
+}
+
+/* Social media icon color */
+.social-icons a{
+  background-color: #016D12!important;
+}
+.social-icons a:hover{
+  background-color: #62BF04!important;
+}
+ul.social-icons{
+  justify-content: center;
+}
+ul.footer-social li {
+  margin-right: 2rem;
+}
+.footer-widgets a{
+  color:#62BF04!important;
 }
 /* ---END of footer--- */
