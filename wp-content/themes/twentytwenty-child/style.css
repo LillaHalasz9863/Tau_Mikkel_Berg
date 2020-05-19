@@ -23,8 +23,8 @@ body{
     font-weight: 400;
     font-style: normal;
     color: black;
+    margin:0;
 }
-
 /* Doesn't show the permalinks on the top of the pages */
 h1.entry-title{
     display:none;
@@ -55,8 +55,6 @@ a.online_linkbutton:hover, a.consultation_linkbutton:hover, a.personal_linkbutto
   transition: 0.2s;
 }
 /* ----END styling of link buttons---- */
-
-
 
 
 
@@ -255,6 +253,80 @@ table.personal{
       font-style: normal;
   }
 /* ---END of programmer--- */
+
+
+/* ---START of reviews--- */
+* {box-sizing: border-box}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  padding: 20px 20px;
+}
+/* Img style*/
+img{
+  vertical-align: middle;
+  width:50%;
+  margin-left: 20%;
+  }
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.4s ease;
+  border-radius: 3px 3px 3px 3px;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 3px 3px 3px;
+}
+
+/* On hover, add a green background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(74,145,3,0.8);
+}
+th{
+  vertical-align:bottom;
+}
+/* Description text */
+td.description {
+  color: black;
+  font-size: 15px;
+  bottom: 8px;
+  width: 40%;
+  text-align: justify;
+  vertical-align:top;
+  padding:10px;
+}
+/* The dots/bullets/indicators */
+.square {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .square:hover {
+  background-color: #414141;
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/* ---END of reviews--- */
 
 
 
