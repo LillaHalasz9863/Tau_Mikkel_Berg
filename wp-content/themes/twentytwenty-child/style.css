@@ -15,10 +15,8 @@ Tags: clean, starter
 /* General settings */
 
 /* green: #62BF04
-lgreen:#4A9103
-blue: #00A7D2
-lblue:#2BD8E8 */
-
+bgreen:#4A9103
+dgreen: #016D12*/
 
 body{
     font-family: roboto, sans-serif;
@@ -26,43 +24,134 @@ body{
     font-style: normal;
     color: black;
 }
+
+/* Doesn't show the permalinks on the top of the pages */
 h1.entry-title{
     display:none;
 }
-ul.primary-menu a {
-    color:#000000!important;
-    }
-
-/*---START of grid---*/
- 
+/* Makes the space smaller where the permalinks would be */
+.singular .entry-header{
+padding:20px;
+}
 
 
+/* ----START styling of link buttons---- */
+a.online_linkbutton, a.consultation_linkbutton, a.personal_linkbutton, a.programme_button{
+  color: white;
+    background-color:#62BF04!important;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none!important;
+    display: inline-block;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    font-family: p22-underground-sc, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+}
+a.online_linkbutton:hover, a.consultation_linkbutton:hover, a.personal_linkbutton:hover, a.programme_button:hover{
+  background-color:#016D12!important;
+  transition: 0.2s;
+}
+/* ----END styling of link buttons---- */
+
+
+
+
+
+/*--------------START of grids-------------*/
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: 20px;
+}
+
+/*---START of home grid---*/
+h2#motto{
+  grid-column: col-start / span 6;
+  grid-row: 1 ;
+}
+hr#home_hr{
+  grid-column: col-start / span 6;
+  grid-row: 2 ;
+}
+p#home_text{
+  grid-column: col-start / span 6;
+  grid-row: 3;
+}
+img#home_pic{
+  grid-column: col-start 8/ span 5;
+  grid-row: 1 / 4;
+}
+a.online_linkbutton{
+  grid-column: col-start / span 2;
+  grid-row: 5 ;
+}
+a.consultation_linkbutton{
+  grid-column: col-start 3/ span 2;
+  grid-row: 5;
+}
+a.personal_linkbutton{
+  grid-column: col-start 5/ span 2;
+  grid-row: 5 ;
+}
+/*---END of home grid---*/
+
+/*---START of programmes---*/
+h2#online_title{
+  grid-column: col-start / span 12;
+  grid-row: 1 ;
+}
+ table.beginner{
+  grid-column: col-start 3/ span 4;
+  grid-row: 2 ;
+ }
+ table.advanced{
+  grid-column: col-start 7 / span 4;
+  grid-row: 2 ;
+}
+h2#consultation_title{
+  grid-column: col-start 3/ span 4;
+  grid-row: 3 ;
+}
+h2#personal_title{
+  grid-column: col-start 7 / span 4;
+  grid-row: 3 ;
+}
+table.consultation{
+  grid-column: col-start 3/ span 4;
+  grid-row: 4 ;
+}
+table.personal{
+  grid-column: col-start 7 / span 4;
+  grid-row: 4 ;
+}
 /*---END of grid---*/
 
 
 
 
+/* --- Resizing the width of the content space--- */
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide){
+  max-width: 90%;
+}
 
 
 /* ---START of menu--- */
-ul.primary-menu, .menu-modal-inner{
-    font-family: p22-underground-sc, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 25px;
-}
+/* changing default menu style */
+ul.primary-menu a, .ancestor-wrapper a{
+  color:#000000!important;
+  padding:5px;
+  text-decoration: none!important;
+  font-family: p22-underground-sc, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  }
 
-
-ul.primary-menu a{
-padding:5px;
-text-decoration: none;
-}
-
-ul.primary-menu a:link{
-    text-decoration: none;
-}
-
-ul.primary-menu a::before{
+/* animation on the menu tabs */
+ul.primary-menu a::before, .ancestor-wrapper a::before{
     content: '';
     position: absolute;
     top: 0%;
@@ -72,13 +161,11 @@ ul.primary-menu a::before{
     width: 0%;
     transition: 0.5s all;
     }
-
-    ul.primary-menu a:hover::before{
+    ul.primary-menu a:hover::before, .ancestor-wrapper a:hover::before{
         width:100%;
         transition: 1s all;
     }
-
-    ul.primary-menu a::after{
+ul.primary-menu a::after, .ancestor-wrapper a::after{
         content: '';
         position: absolute;
         bottom: 0%;
@@ -88,48 +175,68 @@ ul.primary-menu a::before{
         width: 0%;
         transition: 0.5s all;
         }
-    
-        ul.primary-menu a:hover::after{
+    ul.primary-menu a:hover::after, .ancestor-wrapper a:hover::after{
             width:100%;
             transition: 1s all;
         }
-
+/* how it looks with current page */
+li.current-menu-item a, li.current_page_item a{
+          border-top: 2px solid #016D12;
+          border-bottom: 2px solid #016D12;
+          transition:none;
+        }
 /* ---END of menu--- */
 
 
 
+
+/* ---START of home--- */
+h2#motto{
+font-family: p22-underground-sc, sans-serif;
+font-weight: 600;
+font-style: normal;
+margin-top: 30px;
+}
+/* ---END of home--- */
+
+
+
 /* ---START of programmer--- */
-h2{
+h2#online_title,
+h2#consultation_title,
+h2#personal_title{
     text-align:center;
     text-decoration:underline;
     font-family: p22-underground-sc, sans-serif;
       font-weight: 400;
       font-style: normal;
-      font-size: 20px;
+      font-size: 30px;
       margin:0;
   }
-  table{
-    border: 1px solid black;
-    border-radius: 7px;
+table.beginner,
+table.advanced,
+table.consultation,
+table.personal{
     padding:15px 20px; 
     width:100%;
   }
-  table:hover {
-    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+  table{
+    border: 5px solid black;
+    border-radius: 6px;
   }
   td {
     text-align: center;
   }
   th {
+    padding:20px 0px;
+    text-align: center;
     font-family: p22-underground-sc, sans-serif;
       font-weight: 400;
       font-style: normal;
       font-size: 25px;
-    padding:20px 0px;
-    text-align: center;
   }
   td.price{
-    color:#00A7D2;
+    color:#016D12;
   }
   td {
     font-family: roboto, sans-serif;
@@ -147,24 +254,14 @@ h2{
       font-weight: 400;
       font-style: normal;
   }
-  
-  td button {
-    color: white;
-    background-color:#00A7D2!important;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none!important;
-    display: inline-block;
-    border: none;
-    border-radius: 6px;
-    font-size: 20px;
-    font-family: p22-underground-sc, sans-serif;
-      font-weight: 400;
-      font-style: normal;
-  }
-  
-  button:hover{
-    background-color:#4A9103!important;
-    transition: 0.2s;
-  }
 /* ---END of programmer--- */
+
+
+
+
+/* ---START of footer--- */
+b, strong, p{
+  font-family: roboto, sans-serif;
+    color: black;
+}
+/* ---END of footer--- */
