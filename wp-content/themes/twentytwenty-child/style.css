@@ -43,6 +43,10 @@ dgreen: #016D12*/
   grid-column: col-start / span 6;
   grid-row: 1 ;
 }
+.wp-block-image .size-large .wp-image-187{
+  grid-column: col-start 10/ span 3;
+  grid-row: 1 ;
+}
 a.online_linkbutton{
   grid-column: col-start / span 2;
   grid-row: 2 ;
@@ -146,9 +150,9 @@ grid-row: 2 / span 3;
   grid-column: col-start / span 3;
   grid-row: 4 ;
 }
-.wp-image-173{
-  grid-column: col-start / span 3;
-  grid-row: 1 / span 3;
+.wp-block-image .size-large .wp-image-187{
+  grid-column: col-start / span 1;
+  grid-row: 1 / span 3 ;
 }
 a.online_linkbutton{
   grid-column: col-start 3 / span 1;
@@ -172,35 +176,76 @@ a.personal_linkbutton{
 /* ---START of mobile aboutme--- */
 .vision {
   grid-column: col-start  3/ span 1;
-  grid-row: 1 ;
+  grid-row: 2 ;
 }
 .aboutme{
   grid-column: col-start 1/ span 2;
-  grid-row: 1 ;
+  grid-row: 2 ;
 }
 .languages{
   grid-column: col-start 1 / span 2;
-  grid-row: 2 ;
+  grid-row: 3 ;
 }
 img#aboutme_img{
   grid-column: col-start 1/ span 3;
-  grid-row: 3 ;
+  grid-row: 1 ;
 }
 /* ---END of mobile aboutme--- */
 
+/*---START of mobile programmes---*/
+h2#online_title{
+  grid-column: col-start  / span 3;
+  grid-row: 1 ;
+}
+#progfirst{
+  display:none;
+}
+ table.beginner{
+  grid-column: col-start / span 3;
+  grid-row: 2 ;
+ }
+ table.advanced{
+  grid-column: col-start  / span 3;
+  grid-row: 3 ;
+}
+h2#consultation_title{
+  grid-column: col-start / span 3;
+  grid-row: 4 ;
+}
+table.consultation{
+  grid-column: col-start / span 3;
+  grid-row: 5 ;
+}
+h2#personal_title{
+  grid-column: col-start / span 3;
+  grid-row: 6 ;
+}
+table.personal{
+  grid-column: col-start  / span 3;
+  grid-row: 7 ;
+}
+/*---END of mobile programmes---*/
+
 /* ---START of mobile contact--- */
 iframe{
-  grid-column: col-start  1/ span 1;
+  grid-column: col-start  / span 3;
+  grid-row: 6;
+  }
+  .wp-block-social-links{
+  grid-column: col-start   / span 3;
   grid-row: 2 ;
+
   }
   #contact_info{
   grid-column: col-start  / span 3;
   grid-row: 1;
+  text-align: center;
   }
   .contact-container{
-  grid-column: col-start 2/ span 2;
-  grid-row: 2;
+  grid-column: col-start / span 3;
+  grid-row: 3 / span 3;
   }
+  /*---END of contact---*/
   /* ---START of mobile contact--- */
 
 
@@ -209,14 +254,13 @@ iframe{
 /*---END of grid---*/
 
 
-
 /* paragraph style */
 p{
   font-family: roboto, sans-serif;
   font-weight: 400;
   font-style: normal;
   color: black;
-  margin:0;
+  margin:10px;
 }
 /* Doesn't show the permalinks on the top of the pages */
 h1.entry-title{
@@ -241,14 +285,6 @@ font-size: 30px;
 /* space between content and hr line */
 .entry-content hr{
 margin:0
-}
-#progfirst {
-  border-left: 2px solid #62BF04;
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  top:45%;
-  margin-left: -3px;
 }
 
 
@@ -428,6 +464,14 @@ td.price, td.discount{
   width:50%;
   margin-left:25%;
   cursor: pointer;
+  }
+  #programme_line {
+    border-left: 2px solid #62BF04;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top:45%;
+    margin-left: -3px;
   }
 /* ---END of programmer--- */
 
