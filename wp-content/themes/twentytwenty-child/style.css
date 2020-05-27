@@ -11,11 +11,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: clean, starter
 */
 
-/* General settings */
-/* green: #62BF04
-bgreen:#4A9103
-dgreen: #016D12*/
-
 /* This is why the pages have transition on it */
 @keyframes transitionIn {
   from {
@@ -27,9 +22,6 @@ dgreen: #016D12*/
     transform: translateY(0);
   }
 }
-.slideshow-container{
-  animation: transitionIn 0.75s;
-}
 /*--------------START of grids-------------*/
 .wrapper {
   display: grid;
@@ -37,15 +29,14 @@ dgreen: #016D12*/
   grid-gap: 20px;
   animation: transitionIn 0.75s;
 }
-
 /*---START of home grid---*/
 .motto{
   grid-column: col-start / span 6;
   grid-row: 1 ;
 }
-.wp-block-image .size-large .wp-image-187{
-  grid-column: col-start 10/ span 3;
-  grid-row: 1 ;
+figure.wp-block-image.size-large.home{
+  grid-column: col-start 9/ span 3;
+  grid-row: 1 / span 2;
 }
 a.online_linkbutton{
   grid-column: col-start / span 2;
@@ -63,20 +54,28 @@ a.personal_linkbutton{
 
 /*---START of about me---*/
 .vision {
-  grid-column: col-start / span 6;
+  grid-column: col-start 1/ span 6;
   grid-row: 1 ;
 }
 .aboutme{
-  grid-column: col-start / span 6;
+  grid-column: col-start 1/ span 6;
   grid-row: 2 ;
 }
-.languages{
-  grid-column: col-start / span 6;
+.certificates{
+  grid-column: col-start 1/ span 6;
   grid-row: 3 ;
+}
+.languages{
+  grid-column: col-start 1/ span 6;
+  grid-row: 4 ;
 }
 img#aboutme_img{
   grid-column: col-start 8/ span 4;
-  grid-row: 1 / span 4;
+  grid-row: 3 / span 2;
+}
+figure.wp-block-image.size-large.about{
+  grid-column: col-start 8 / span 4;
+  grid-row: 1 / span 2;
 }
 /*---END of about me---*/
 
@@ -85,35 +84,71 @@ h2#online_title{
   grid-column: col-start 5 / span 4;
   grid-row: 1 ;
 }
-#progfirst{
-  grid-column: col-start 6 / span 1;
-  grid-row: 2 / span 2;
-}
  table.beginner{
-  grid-column: col-start 2/ span 4;
+  grid-column: col-start 3/ span 4;
   grid-row: 2 ;
  }
  table.advanced{
-  grid-column: col-start 8 / span 4;
+  grid-column: col-start 7 / span 4;
   grid-row: 2 ;
 }
 h2#consultation_title{
-  grid-column: col-start 2/ span 4;
+  grid-column: col-start 3/ span 4;
   grid-row: 3 ;
 }
 h2#personal_title{
-  grid-column: col-start 8/ span 4;
+  grid-column: col-start 7/ span 4;
   grid-row: 3 ;
 }
 table.consultation{
-  grid-column: col-start 2/ span 4;
+  grid-column: col-start 3/ span 4;
   grid-row: 4 ;
 }
 table.personal{
-  grid-column: col-start 8 / span 4;
+  grid-column: col-start 7/ span 4;
   grid-row: 4 ;
 }
 /*---END of programmes---*/
+
+/*---START of reviews---*/
+.review_img_1{
+  grid-column: col-start 2/ span 5;
+  grid-row: 1/ span 3 ;
+}
+.review_name_1{
+  grid-column: col-start 8/ span 4;
+  grid-row: 1 ;
+}
+.review_description_1{
+  grid-column: col-start 7/ span 6;
+  grid-row: 2 ;
+}
+.review_img_2{
+  grid-column: col-start 2/ span 5;
+  grid-row: 5 / span 3 ;
+}
+.review_name_2{
+  grid-column: col-start 8/ span 4;
+  grid-row: 5 ;
+}
+.review_description_2{
+  grid-column: col-start 7/ span 6;
+  grid-row: 6 ;
+}
+.review_img_3{
+  grid-column: col-start 2/ span 5;
+  grid-row: 9 / span 3 ;
+}
+.review_name_3{
+  grid-column: col-start 8/ span 4;
+  grid-row: 9 ;
+}
+.review_description_3{
+  grid-column: col-start 7/ span 6;
+  grid-row: 10 ;
+}
+
+/*---END of reviews---*/
 
 /*---START of contact---*/
 iframe{
@@ -128,7 +163,7 @@ grid-row: 3 ;
 grid-column: col-start 7 / span 6;
 grid-row: 1;
 }
-.contact-container{
+div#wpcf7-f326-p20-o1{
 grid-column: col-start 7/ span 6;
 grid-row: 2 / span 3;
 }
@@ -141,115 +176,210 @@ grid-row: 2 / span 3;
 @media screen and (max-width: 1110px){
   .wrapper {
     display: grid;
-    grid-template-columns: repeat(3, [col-start] 1fr);
+    grid-template-columns: repeat(4, [col-start] 1fr);
     grid-gap: 20px;
   }
-
 /* ---START of mobile home--- */
 .motto{
-  grid-column: col-start / span 3;
-  grid-row: 4 ;
+  grid-column: col-start / span 4;
+  grid-row: 1 ;
 }
-.wp-block-image .size-large .wp-image-187{
-  grid-column: col-start / span 1;
-  grid-row: 1 / span 3 ;
+.motto h2{
+  font-size: 30px!important;
+}
+figure.wp-block-image.size-large.home{
+  grid-column: col-start  / span 4;
+  grid-row: 2;
+  margin: 0 auto;
 }
 a.online_linkbutton{
-  grid-column: col-start 3 / span 1;
-  grid-row: 1;
-  font-size:14px!important;
-  padding:2px!important;
-}
-a.consultation_linkbutton{
-  grid-column: col-start 3/ span 1;
-  grid-row: 2;
-  font-size:14px!important;
-}
-a.personal_linkbutton{
-  grid-column: col-start 3/ span 1;
+  grid-column: col-start 2/ span 2;
   grid-row: 3;
   font-size:14px!important;
   padding:2px!important;
 }
+a.consultation_linkbutton{
+  grid-column: col-start 2/ span 2;
+  grid-row: 4;
+  font-size:14px!important;
+}
+a.personal_linkbutton{
+  grid-column: col-start 2/ span 2;
+  grid-row: 5;
+  font-size:13px!important;
+  padding:2px!important;
+}
+a.online_linkbutton, a.consultation_linkbutton, a.personal_linkbutton{
+  height:30px;
+}
 /* ---END of mobile home--- */
 
 /* ---START of mobile aboutme--- */
+figure.wp-block-image.size-large.about{
+  grid-column: col-start 1 / span 4;
+  grid-row: 1 ;
+  margin: 0 auto;
+}
 .vision {
-  grid-column: col-start  3/ span 1;
+  grid-column: col-start 1 / span 4;
   grid-row: 2 ;
+  text-align: center;
 }
 .aboutme{
-  grid-column: col-start 1/ span 2;
-  grid-row: 2 ;
+  grid-column: col-start 1/ span 4;
+  grid-row: 3 ;
+  text-align: center;
+}
+.certificates{
+  grid-column: col-start 1/ span 4;
+  grid-row: 5 ;
+  text-align: center;
 }
 .languages{
-  grid-column: col-start 1 / span 2;
-  grid-row: 3 ;
+  grid-column: col-start 1 / span 4;
+  grid-row: 6;
+  text-align: center;
 }
 img#aboutme_img{
-  grid-column: col-start 1/ span 3;
-  grid-row: 1 ;
+  grid-column: col-start 1/ span 4;
+  grid-row: 4 ;
 }
 /* ---END of mobile aboutme--- */
 
 /*---START of mobile programmes---*/
 h2#online_title{
-  grid-column: col-start  / span 3;
+  grid-column: col-start  / span 4;
   grid-row: 1 ;
-}
-#progfirst{
-  display:none;
+  font-size: 25px;
 }
  table.beginner{
-  grid-column: col-start / span 3;
+  grid-column: col-start / span 4;
   grid-row: 2 ;
  }
  table.advanced{
-  grid-column: col-start  / span 3;
+  grid-column: col-start  / span 4;
   grid-row: 3 ;
 }
 h2#consultation_title{
-  grid-column: col-start / span 3;
+  grid-column: col-start / span 4;
   grid-row: 4 ;
+  font-size: 25px;
 }
 table.consultation{
-  grid-column: col-start / span 3;
+  grid-column: col-start / span 4;
   grid-row: 5 ;
 }
 h2#personal_title{
-  grid-column: col-start / span 3;
+  grid-column: col-start / span 4;
   grid-row: 6 ;
+  font-size: 25px;
 }
 table.personal{
-  grid-column: col-start  / span 3;
+  grid-column: col-start  / span 4;
   grid-row: 7 ;
+}
+th{
+  padding:0px!important;
+  font-size: 22px!important;
+}
+table.beginner, table.advanced, table.consultation, table.personal{
+  margin:0px;
+}
+td.price, td.discount{
+  font-size: 20px;
+}
+.review_img_1{
+  grid-column: col-start / span 4;
+  grid-row: 2 ;
+}
+.review_name_1{
+  grid-column: col-start / span 4;
+  grid-row: 1 ;
+}
+.review_description_1{
+  grid-column: col-start / span 4;
+  grid-row: 3 ;
+}
+.review_img_2{
+  grid-column: col-start / span 4;
+  grid-row: 5 ;
+}
+.review_name_2{
+  grid-column: col-start / span 4;
+  grid-row: 4 ;
+}
+.review_description_2{
+  grid-column: col-start / span 4;
+  grid-row: 6 ;
+}
+.review_img_3{
+  grid-column: col-start / span 4;
+  grid-row: 8;
+}
+.review_name_3{
+  grid-column: col-start / span 4;
+  grid-row: 7 ;
+}
+.review_description_3{
+  grid-column: col-start / span 4;
+  grid-row: 9 ;
+}
 }
 /*---END of mobile programmes---*/
 
+@media screen and (max-width: 930px){
 /* ---START of mobile contact--- */
 iframe{
-  grid-column: col-start  / span 3;
+  grid-column: col-start  / span 4;
   grid-row: 6;
   }
   .wp-block-social-links{
-  grid-column: col-start   / span 3;
+  grid-column: col-start   / span 4;
   grid-row: 2 ;
 
   }
   #contact_info{
-  grid-column: col-start  / span 3;
+  grid-column: col-start  / span 4;
   grid-row: 1;
   text-align: center;
   }
-  .contact-container{
-  grid-column: col-start / span 3;
+  div#wpcf7-f326-p20-o1{
+  grid-column: col-start / span 4;
   grid-row: 3 / span 3;
   }
-  /*---END of contact---*/
-  /* ---START of mobile contact--- */
-
-
+  .review_img{
+    margin-left:0px!important;
+  }
 }
+
+
+@media screen and (max-width: 750px){
+a.programme_consultationbutton, a.programme_onlinebutton, a.programme_personalbutton{
+  width:100%!important;
+  margin:0!important;
+}
+}
+
+@media screen and (max-width: 550px) {
+  th{
+    font-size:15px!important;
+    padding:0px;
+  }
+  .review_description {
+    font-size:12px!important;
+  }
+  button, button:not(.toggle){
+    width:20%!important;
+    font-size: 15px!important;
+  }
+  h3{
+    font-size: 15px!important;
+  }
+  h3.review_name_3, h3.review_name_2, h3.review_name_1{
+    font-size: 20px!important;
+  }
+}
+/*---END of mobile contact---*/
 /*---END of mobile grid---*/
 /*---END of grid---*/
 
@@ -286,12 +416,19 @@ font-size: 30px;
 .entry-content hr{
 margin:0
 }
+/* No next or previous button on fq&a */
+a.next.page-numbers{
+  display:none;
+}
+a.prev.page-numbers{
+  display:none
+}
 
 
 
-/* ----START styling of link buttons---- */
+/* ----START styling of link/ buttons---- */
 a.online_linkbutton, a.consultation_linkbutton, a.personal_linkbutton, 
-a.programme_consultationbutton, a.programme_onlinebutton, a.programme_personalbutton, input[type=submit]{
+a.programme_consultationbutton, a.programme_onlinebutton, a.programme_personalbutton, input[type=submit], button:not(.toggle){
     color: black!important;
     background-color:transparent!important;
     text-align: center;
@@ -307,33 +444,36 @@ a.programme_consultationbutton, a.programme_onlinebutton, a.programme_personalbu
     align-content: center;
     justify-content: center;
 }
+a.online_linkbutton, a.consultation_linkbutton, a.personal_linkbutton{
+ height:80px; 
+}
 a.online_linkbutton, a.programme_onlinebutton{
-  border-image: linear-gradient(to bottom right,  #62BF04, #016D12);
+  border-image: linear-gradient(45deg,  #62BF04, #016D12);
   border-image-slice: 1;
   transition:0.3s;
 }
 a.online_linkbutton:hover, a.programme_onlinebutton:hover{
-  background-image: linear-gradient(to bottom right,  #62BF04, #016D12);
+  background-image: linear-gradient(45deg,  #62BF04, #016D12);
   transition:0.3s;
   color:white!important;
 }
 a.consultation_linkbutton, a.programme_consultationbutton , input[type=submit]{
-  border-image: linear-gradient(to bottom right,  #016D12, #1884cc);
+  border-image: linear-gradient(45deg,  #016D12, #1884cc);
   border-image-slice: 1;
   transition:0.3s;
 }
 a.consultation_linkbutton:hover, a.programme_consultationbutton:hover, input[type=submit]:hover{
-  background-image: linear-gradient(to bottom right,  #016D12, #1884cc);
+  background-image: linear-gradient(45deg,  #016D12, #1884cc);
   transition:0.3s;
   color:white!important;
 }
 a.personal_linkbutton,  a.programme_personalbutton{
-  border-image: linear-gradient(to bottom right,  #016D12, #62BF04);
+  border-image: linear-gradient(45deg,  #016D12, #62BF04);
   border-image-slice: 1;
   transition:0.3s;
 }
 a.personal_linkbutton:hover,  a.programme_personalbutton:hover{
-  background-image: linear-gradient(to bottom right,  #016D12, #62BF04);
+  background-image: linear-gradient(45deg,  #016D12, #62BF04);
   transition:0.3s;
   color:white!important;
 }
@@ -465,114 +605,52 @@ td.price, td.discount{
   margin-left:25%;
   cursor: pointer;
   }
-  #programme_line {
-    border-left: 2px solid #62BF04;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    top:45%;
-    margin-left: -3px;
-  }
 /* ---END of programmer--- */
 
 
 
-/* ---START of reviews--- */
-* {box-sizing: border-box}
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-  padding: 0px 20px;
-}
-table{
-  border:3px solid white!important;
-  height:20%
-}
-/* Img style*/
-img.img_review{
-  vertical-align: middle;
-  max-height:350px;
-  display:inline;
-  }
-.reviewimgtd{
-  width:40%;
-}
-/* Name */
-th{
-  vertical-align:bottom;
-  width:60%;
-  height:30%;
-  border:3px solid white!important;
-  }
-/* Description text */
-td.description {
-  color: black;
-  font-size: 15px;
-  bottom: 8px;
-  width: 60%;
-  height:70%;
-  text-align: justify;
-  vertical-align:top;
-  padding:10px;
-  border:3px solid white!important;
-  }
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  color: black;
-  font-weight: bold;
-  font-size: 25px;
-  transition: 0.4s ease;
-  border-radius: 3px 3px 3px 3px;
-  user-select: none;
-  text-decoration: none;
-  padding: 5px
-}
-.prev{
-  left:0;
-}
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 3px 3px 3px;
-}
-/* On hover, add a green background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(74,145,3,0.8);
-}
-/* The dots/bullets/indicators */
-.square {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbbbbb;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-.active, .square:hover {
-  background-color: #414141;
-}
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-/* ---END of reviews--- */
-
-
-
 /* ---START of FQ&A--- */
-.entry-categories a{
-  color:#62BF04!important;
+button, button:not(.toggle) {
+  color: black!important;
+  background-color:transparent!important;
+  text-align: center;
+  text-decoration: none!important;
+  border: 5px solid transparent;
+  border-image: linear-gradient(45deg,  #016D12, #1884cc);
+  border-image-slice: 1;
+  transition:0.3s;
+  cursor: pointer;
+  font-size: 25px;
+  width: 40%!important;
 }
-.post-inner{
-  padding:20px;
+button.toggle.nav-toggle.mobile-nav-toggle{
+  left:80%;
+}
+button.close-nav-toggle{
+  left:60%;
+}
+
+.active, .accordion:hover {
+ background-image: linear-gradient(45deg,  #016D12, #1884cc);
+  transition:0.3s;
+  color:white!important;
+}
+h3{
+  font-size: 30px;
+  font-family: p22-underground, sans-serif;
+  font-weight: 900;
+  text-align:center;
+  margin:0;
+}
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  text-align:center;
+}
+.review_img_1, .review_img_2, .review_img_3{
+  margin:auto;
 }
 /* ---END of FQ&A--- */
 
@@ -636,12 +714,5 @@ ul.footer-social li {
 }
 .footer-widgets a{
   color:#62BF04!important;
-}
-/* To the top button */
-to-the-top{
-  color: #016D12!important;
-}
-to-the-top:hover{
-  color: #62BF04!important;
 }
 /* ---END of footer--- */
