@@ -15,12 +15,15 @@ Tags: clean, starter
 @keyframes transitionIn {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: rotateX(-10deg);
   }
   to{
     opacity: 1;
-    transform: translateY(0);
+    transform: rotateX(0);
   }
+}
+.accordion{
+  animation: transitionIn 0.75s;
 }
 /*--------------START of grids-------------*/
 .wrapper {
@@ -147,7 +150,6 @@ table.personal{
   grid-column: col-start 7/ span 6;
   grid-row: 10 ;
 }
-
 /*---END of reviews---*/
 
 /*---START of contact---*/
@@ -278,6 +280,7 @@ table.personal{
   grid-column: col-start  / span 4;
   grid-row: 7 ;
 }
+/* Style */
 th{
   padding:0px!important;
   font-size: 22px!important;
@@ -288,6 +291,9 @@ table.beginner, table.advanced, table.consultation, table.personal{
 td.price, td.discount{
   font-size: 20px;
 }
+/*---END of mobile programmes---*/
+
+/*---START of mobile review---*/
 .review_img_1{
   grid-column: col-start / span 4;
   grid-row: 2 ;
@@ -324,8 +330,8 @@ td.price, td.discount{
   grid-column: col-start / span 4;
   grid-row: 9 ;
 }
+/*---END of mobile review---*/
 }
-/*---END of mobile programmes---*/
 
 @media screen and (max-width: 930px){
 /* ---START of mobile contact--- */
@@ -350,6 +356,7 @@ iframe{
   .review_img{
     margin-left:0px!important;
   }
+  /* ---END of mobile contact--- */
 }
 
 
@@ -359,7 +366,6 @@ a.programme_consultationbutton, a.programme_onlinebutton, a.programme_personalbu
   margin:0!important;
 }
 }
-
 @media screen and (max-width: 550px) {
   th{
     font-size:15px!important;
@@ -379,12 +385,11 @@ a.programme_consultationbutton, a.programme_onlinebutton, a.programme_personalbu
     font-size: 20px!important;
   }
 }
-/*---END of mobile contact---*/
 /*---END of mobile grid---*/
 /*---END of grid---*/
 
 
-/* paragraph style */
+/* Paragraph style */
 p{
   font-family: roboto, sans-serif;
   font-weight: 400;
@@ -412,16 +417,16 @@ font-weight: 900;
 font-style: normal;
 font-size: 30px;
 }
-/* space between content and hr line */
+/* Space between content and hr line */
 .entry-content hr{
 margin:0
 }
-/* No next or previous button on fq&a */
-a.next.page-numbers{
-  display:none;
+/*Hamburger menu positioning*/
+button.toggle.nav-toggle.mobile-nav-toggle{
+  left:80%;
 }
-a.prev.page-numbers{
-  display:none
+button.close-nav-toggle{
+  left:60%;
 }
 
 
@@ -498,7 +503,7 @@ ul.primary-menu a::before, .ancestor-wrapper a::before{
     position: absolute;
     top: 0%;
     left: 0%;
-    background-color:#016D12;
+    background-color:#62BF04;
     height: 2px;
     width: 0%;
     transition: 0.5s all;
@@ -512,7 +517,7 @@ ul.primary-menu a::after, .ancestor-wrapper a::after{
         position: absolute;
         bottom: 0%;
         right: 0%;
-        background-color: #016D12;
+        background-color: #62BF04;
         height: 2px;
         width: 0%;
         transition: 0.5s all;
@@ -523,8 +528,8 @@ ul.primary-menu a::after, .ancestor-wrapper a::after{
         }
 /* how it looks with current page */
 li.current-menu-item a, li.current_page_item a{
-          border-top: 2px solid #016D12;
-          border-bottom: 2px solid #016D12;
+          border-top: 2px solid #62BF04;
+          border-bottom: 2px solid #62BF04;
           transition:none;
         }
 /* ---END of menu--- */
@@ -623,13 +628,6 @@ button, button:not(.toggle) {
   font-size: 25px;
   width: 40%!important;
 }
-button.toggle.nav-toggle.mobile-nav-toggle{
-  left:80%;
-}
-button.close-nav-toggle{
-  left:60%;
-}
-
 .active, .accordion:hover {
  background-image: linear-gradient(45deg,  #016D12, #1884cc);
   transition:0.3s;
@@ -642,18 +640,21 @@ h3{
   text-align:center;
   margin:0;
 }
-.panel {
+.textbox {
   padding: 0 18px;
   display: none;
   background-color: white;
   overflow: hidden;
   text-align:center;
 }
+/* ---END of FQ&A--- */
+
+
+/* ---START of Reviews--- */
 .review_img_1, .review_img_2, .review_img_3{
   margin:auto;
 }
-/* ---END of FQ&A--- */
-
+/* ---END of Reviews--- */
 
 
 /* ---START of contact--- */
